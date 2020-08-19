@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface PersonService {
     List<Person> getPersonList();
+
+    void insert(String name, String age);
 }

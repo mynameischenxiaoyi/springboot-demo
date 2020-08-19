@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 public class AopServer {
     String name="chenyi";
     public String getHello() {
+        System.out.println("执行hello方法");
         return "hello";
     }
 }

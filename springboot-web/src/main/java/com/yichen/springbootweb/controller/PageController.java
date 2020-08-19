@@ -6,6 +6,7 @@ import com.yichen.springbootweb.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -29,4 +30,12 @@ public class PageController {
         return personService.getPersonList();
     }
 
+
+    @RequestMapping(value = "/insert", method = RequestMethod.POST)
+    public void insert(
+            @RequestParam("name") String name,
+            @RequestParam("age") String age
+            ) {
+        personService.insert(name,age);
+    }
 }

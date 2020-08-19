@@ -8,6 +8,5 @@ public class Test {
         ClassPathXmlApplicationContext ac = new ClassPathXmlApplicationContext("beans.xml");
         AopServer bean2 = (AopServer)ac.getBean("aopServer");
         String hello = bean2.getHello();
-        System.out.println(hello);
     }
 }
